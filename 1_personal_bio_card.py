@@ -3,21 +3,26 @@ def personal_bio_card():
     try:
         #try block contains code
         name = input("Enter your Name: ")
-        age=int(input("Enter your age: "))
-        Address=input("Enter your current Location: ")
-        Hobby=input("enter your hobby: ")
+        age = int(input("Enter your age: "))
+        course = input("Enter your Course: ")
+        college = input("Enter your College: ")
+        email = input("Enter your Email: ")
 
-        print("")
-        print("---------------Personal Bio Card-------------------")
-        print(f"Name: {name}")
-        print(f"age: {age}")
         #because age will not be negative
-        if age<0:
+        if age < 0:
             #so if age is negative it calls valueerror msg declared below in except block
             raise ValueError
-        print(f"Address: {Address}")
-        print(f"Hobbies: {Hobby}")
-        print("---------------------------------------------------")
+
+        print("")
+        print("╔════════════════════════════════╗")
+        print("║       STUDENT BIO CARD         ║")
+        print("╠════════════════════════════════╣")
+        print(f"║  Name    : {name:<20}║")
+        print(f"║  Age     : {str(age) + ' years':<20}║")
+        print(f"║  Course  : {course:<20}║")
+        print(f"║  College : {college:<20}║")
+        print(f"║  Email   : {email:<20}║")
+        print("╚════════════════════════════════╝")
 
     except ValueError:
         '''this block will run automically if any errors occured in code present in try block. 
